@@ -11,10 +11,14 @@ import Control.Applicative
 import Data.Text
 import Database.Persist.Postgresql
 
-connStr = "dbname=dd9en8l5q4hh2a host=ec2-107-21-219-201.compute-1.amazonaws.com user=kpuwtbqndoeyqb password=aCROh525uugAWF1l7kahlNN3E0 port=5432"
+-- connStr :: Text
+connStr = "dbname=ddttg90fgo9gpb host=ec2-107-20-198-81.compute-1.amazonaws.com user=ywvzmcgbsclczx password=FcAhRNG7b35bTYpGVCTSx0vVkG port=5432"
+
+-- codenvy 3000
+-- warp 8080 App
 
 main::IO()
 main = runStdoutLoggingT $ withPostgresqlPool connStr 10 $ \pool -> liftIO $ do 
        runSqlPersistMPool (runMigration migrateAll) pool 
        t@(Static settings) <- static "static"
-       warp 8080 (Sitio t pool)
+       warp 3000 (Sitio t pool)
