@@ -8,5 +8,7 @@ import Usuario
 import Handlers
 import Front
 
+import Handler.Professor
+
 -- Application
 mkYesodDispatch "Sitio" resourcesSitio

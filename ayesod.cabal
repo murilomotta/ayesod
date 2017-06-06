@@ -38,9 +38,16 @@ executable         ayesod
                  , persistent-postgresql         
                  , monad-logger
                  , shakespeare
+                 , time
     
     other-modules: Application
                    Foundation
                    Usuario
                    Handlers
-                   Front
+                   Front                   
+                   Handler.Professor
+             
+                  
+                   
+                   
+                   

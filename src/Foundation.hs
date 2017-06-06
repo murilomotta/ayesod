@@ -6,6 +6,7 @@ module Foundation where
 import Yesod
 import Yesod.Static
 import Data.Text
+import Data.Time.Clock
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool, runMigration )
 
@@ -29,6 +30,24 @@ Usuario
    email Text
    senha Text
    UniqueEmail email
+
+Professor
+    nome Text   
+Aluno
+    nome Text
+    ra   Text
+    UniqueNome nome
+Disciplina
+    professorId ProfessorId
+    nome Text
+    descricao Text
+Horario
+    dataInicio UTCTime
+    dataFim UTCTime
+AlunoDisciplina
+    alunoId AlunoId
+    disciplina DisciplinaId   
+    
 |]
 
 staticFiles "static"

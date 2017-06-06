@@ -1,8 +1,45 @@
 h1 {
     cursor:pointer;
-    color:blue;
+    color:red;
+}
+
+h7 {
+	padding-left:30px;
+	padding-top:30px;
+	font-size:20px;
+	color: white;
+}
+
+h2 {
+	padding:16px;
+	font-size:18px;
+	color: white;
+}
+
+h3 {
+	padding:14px;
+	font-size:16px;
+	color: white;
+}
+
+h4 {
+	padding:12px;
+	font-size:14px;
+	color: white;
+}
+
+h5 {
+	padding:10px;
+	font-size:12px;
+	color: white;
+}
+
+h6 {
+	padding:8px;
+	font-size:10px;
+	color: white;
 }
 
 p{
-    color:red;
+    color:blue;
 }
