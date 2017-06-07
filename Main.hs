@@ -11,8 +11,23 @@ import Control.Applicative
 import Data.Text
 import Database.Persist.Postgresql
 
+dbname    = "ddttg90fgo9gpb"
+host      = "ec2-107-20-198-81.compute-1.amazonaws.com"
+user      = "ywvzmcgbsclczx"
+password  = "FcAhRNG7b35bTYpGVCTSx0vVkG"
+port      = "5432"
+
+
 -- connStr :: Text
-connStr = "dbname=ddttg90fgo9gpb host=ec2-107-20-198-81.compute-1.amazonaws.com user=ywvzmcgbsclczx password=FcAhRNG7b35bTYpGVCTSx0vVkG port=5432"
+
+connStr = pack $ unwords ["dbname =", dbname,
+                          "host =", host, 
+                          "user =", user, 
+                          "password =", password, 
+                          "port =", port]
+                          
+
+--"dbname=ddttg90fgo9gpb host=ec2-107-20-198-81.compute-1.amazonaws.com user=ywvzmcgbsclczx password=FcAhRNG7b35bTYpGVCTSx0vVkG port=5432"
 
 -- codenvy 3000
 -- warp 8080 App

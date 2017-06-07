@@ -13,40 +13,38 @@ import Database.Persist.Postgresql
 data Sitio = Sitio {getStatic :: Static, connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
-Departamento
-   nome Text
-   sigla Text sqltype=varchar(3)
-   deriving Show
 
-Pessoa
-   nome Text
-   idade Int
-   salario Double
-   deptoid DepartamentoId
-   deriving Show
-  
-Usuario
-   nome Text
-   email Text
-   senha Text
-   UniqueEmail email
+Sala
+  numero Text sqltype=varchar(3)
+  desc Text
+  deriving Show
 
 Professor
-    nome Text   
-Aluno
-    nome Text
-    ra   Text
-    UniqueNome nome
+  nome Text
+  nome_exibe Text
+  deriving Show
+  
+Usuario
+  nome Text
+  email Text
+  senha Text
+  UniqueEmail email
+
+Recurso
+  nome Text
+  desc Text
+
 Disciplina
-    professorId ProfessorId
-    nome Text
+    sigla Text sqltype=varchar(15)
     descricao Text
+
 Horario
     dataInicio UTCTime
     dataFim UTCTime
+
 AlunoDisciplina
     alunoId AlunoId
-    disciplina DisciplinaId   
+    disciplina DisciplinaId
     
 |]
 
