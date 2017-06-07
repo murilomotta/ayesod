@@ -46,6 +46,12 @@ executable         ayesod
                    Handlers
                    Front                   
                    Handler.Professor
+                   Handler.Disciplina
+                   Handler.Horario
+                   Handler.Sala
+                   Handler.Usuario
+                   
+                   
              
                   
                    
