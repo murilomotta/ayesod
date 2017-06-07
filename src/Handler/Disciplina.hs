@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings, QuasiQuotes,
              TemplateHaskell #-}
  
-module Handler.Aluno where
+module Handler.Disciplina where
 import Yesod
 import Foundation
 import Control.Monad.Logger (runStdoutLoggingT)

@@ -30,21 +30,20 @@ Usuario
   senha Text
   UniqueEmail email
 
-Recurso
-  nome Text
-  desc Text
+--Recurso
+--  nome Text
+--  desc Text
 
 Disciplina
-    sigla Text sqltype=varchar(15)
-    descricao Text
+  sigla Text sqltype=varchar(15)
+  descricao Text
+  curso Text sqltype=varchar(5)
 
 Horario
-    dataInicio UTCTime
-    dataFim UTCTime
-
-AlunoDisciplina
-    alunoId AlunoId
-    disciplina DisciplinaId
+  periodo     Text sqltype=varchar(2)
+  disciplina  DisciplinaId
+  prof        ProfessorId
+  curso       Text sqltype=varchar(5)
     
 |]
 
