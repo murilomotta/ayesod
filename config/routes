@@ -1,15 +1,15 @@
-/cadastro         CadastroR     GET POST
-/listar           ListarR       GET 
+--/cadastro         CadastroR     GET POST
+--/listar           ListarR       GET 
 --/pessoa/#PessoaId PessoaR    GET POST
-/depto            DeptoR     GET POST
+--/depto            DeptoR     GET POST
 
 /                   HomeR       GET
 /teste              TesteR      GET
-/pag1             Pag1R       GET
-/pag2             Pag2R       GET
-/pag3             Pag3R       GET
-/pag4             Pag4R       GET
-/hello            HelloR      GET
+/pag1               Pag1R       GET
+/pag2               Pag2R       GET
+/pag3               Pag3R       GET
+/pag4               Pag4R       GET
+--/hello              HelloR      GET
 /admin              AdminR      GET
 
 /static             StaticR    Static getStatic
