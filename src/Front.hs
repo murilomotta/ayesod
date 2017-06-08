@@ -50,7 +50,7 @@ getHomeR = defaultLayout $ do
         <br><br><br>
         <div id="menu_bg"><div id="menu"> <ul>
             <li>
-                <a href=@{AdminR}> ACESSAR O SISTEMA
+                <a href=@{LoginR}> ACESSAR O SISTEMA
             <br>
         <h1>
         

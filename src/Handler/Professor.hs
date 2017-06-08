@@ -151,34 +151,7 @@ postProfessorCadastrarR = do
         FormSuccess professor -> do
             runDB $ insert professor 
             defaultLayout [whamlet|
-            <linha_topo>   
-            <div id="logo"><img src=@{StaticR header_jpg}>
-            <div id="menu_bg"><div id="menu"> <ul>
-                <li>
-                    <a href=@{AdminR}> HOME
-                <li> 
-                    <a href=@{ProfessorCadastrarR}> PROFESSOR
-                <li>
-                    <a href=@{CadastrarDisciplinasR}> DISCIPLINA
-                <li>
-                    <a href=@{CadastrarSalaR}> SALA
-                <li>
-                    <a href=@{CadastrarHorarioR}> HORÁRIO
-            <br>
-
-            
-            <div id="content"><div id="sidebar-left"><h1> Prof. #{professorNome professor} Inserido(a) com sucesso. 
-            <div id="sidebar-center">
-            <div id="sidebar-right">
-            <div id="footer"><br>© Copyright 2017, Inc. Todos os direitos reservados.<br>
+            <h1> Prof. #{professorNome professor} Inserido(a) com sucesso. 
             |]
-            
-    
-    
-            
-            
-            
-            
         _ -> redirect ProfessorCadastrarR
-        
         

@@ -64,7 +64,7 @@ instance YesodPersist Sitio where
 instance Yesod Sitio where
     authRoute _ = Just LoginR
     isAuthorized LoginR _ = return Authorized
-    isAuthorized AdminR _ = return Authorized
+    isAuthorized HomeR _ = return Authorized
     isAuthorized UsuarioR _ = isAdmin
     isAuthorized AdminR _ = isAdmin
     isAuthorized _ _ = isUser

@@ -165,5 +165,5 @@ postCadastrarHorarioR = do
             defaultLayout [whamlet| 
                <h1> Horário inserido com sucesso. 
             |]
-        _ -> redirect CadastrarSalaR
+        _ -> redirect CadastrarHorarioR
             

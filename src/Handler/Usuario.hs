@@ -180,6 +180,8 @@ postLoginR = do
 
 getAdminR :: Handler Html
 getAdminR = defaultLayout $ do
+    setTitle "FATEC - Página do Administrador"
+    sess <- lookupSession "_USER"
     [whamlet|
             <linha_topo>   
             <div id="logo"><img src=@{StaticR header_jpg}>
@@ -195,9 +197,10 @@ getAdminR = defaultLayout $ do
                 <li>
                     <a href=@{CadastrarHorarioR}> HORÁRIO
             <br>
-
+            
             
             <div id="content"><div id="sidebar-left"><h1>BEM VINDO!
+          
             <div id="sidebar-center">
             <div id="sidebar-right">
             <div id="footer"><br>© Copyright 2017, Inc. Todos os direitos reservados.<br>

@@ -147,7 +147,7 @@ postCadastrarSalaR = do
         FormSuccess sala -> do
             runDB $ insert sala 
             defaultLayout [whamlet| 
-               <h1> #{salaNumero sala} inserida com sucesso. 
+               <h1> Sala #{salaNumero sala} inserida com sucesso. 
             |]
         _ -> redirect CadastrarSalaR
             

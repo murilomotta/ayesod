@@ -148,7 +148,7 @@ postCadastrarDisciplinasR = do
         FormSuccess disciplina -> do
             runDB $ insert disciplina 
             defaultLayout [whamlet| 
-               <h1> #{disciplinaSigla disciplina} inserida com sucesso. 
+               <h1> Disciplina cod. #{disciplinaSigla disciplina} inserida com sucesso. 
             |]
         _ -> redirect CadastrarDisciplinasR
             
