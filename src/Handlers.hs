@@ -9,7 +9,7 @@ import Control.Applicative
 import Data.Text
 
 import Database.Persist.Postgresql
-
+{-
 formDepto :: Form Departamento
 formDepto = renderDivs $ Departamento <$>
             areq textField "Nome" Nothing <*>
@@ -100,3 +100,7 @@ postPessoaR :: PessoaId -> Handler Html
 postPessoaR pid = do
      runDB $ delete pid
      redirect ListarR
+     
+-}
+
+     

@@ -25,26 +25,25 @@ Professor
   deriving Show
   
 Usuario
-  nome Text
+  nome  Text
   email Text
   senha Text
   UniqueEmail email
 
-Recurso
-  nome Text
-  desc Text
+--Recurso
+--  nome Text
+--  desc Text
 
 Disciplina
-    sigla Text sqltype=varchar(15)
-    descricao Text
+  sigla     Text sqltype=varchar(15)
+  descricao Text
+  curso     Text sqltype=varchar(5)
 
 Horario
-    dataInicio UTCTime
-    dataFim UTCTime
-
-AlunoDisciplina
-    alunoId AlunoId
-    disciplina DisciplinaId
+  periodo     Text sqltype=varchar(2)
+  disciplina  DisciplinaId
+  prof        ProfessorId
+  curso       Text sqltype=varchar(5)
     
 |]
 
@@ -89,3 +88,9 @@ instance RenderMessage Sitio FormMessage where
 
 widgetForm :: Route Sitio -> Enctype -> Widget -> Text -> Widget
 widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
+
+
+
+
+
+
