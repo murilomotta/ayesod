@@ -57,7 +57,7 @@ getLoginR = do
                 widgetForm LoginR enctype widget "Login page"
                 
                 [whamlet|
-                    <div id="footer"><br>© Copyright 2017, Inc. Todos os direitos reservados.<br>
+                    <div id="footer">© Copyright 2017, Inc. Todos os direitos reservados.<br>
                 |]
                 
                 

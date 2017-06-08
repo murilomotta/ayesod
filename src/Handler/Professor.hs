@@ -133,6 +133,8 @@ getProfessorCadastrarR = do
 
                 
            
+  
+
 
 postProfessorCadastrarR :: Handler Html    
 postProfessorCadastrarR = do
@@ -140,12 +142,30 @@ postProfessorCadastrarR = do
     case result of
         FormSuccess professor -> do
             runDB $ insert professor 
-            defaultLayout [whamlet| 
-               <h1> #{professorNome professor} Inseridx com sucesso. 
-            |]
-        _ -> redirect ProfessorCadastrarR
+            defaultLayout [whamlet|
+            <linha_topo>   
+            <div id="logo"><img src=@{StaticR header_jpg}>
+            <div id="menu_bg"><div id="menu"> <ul>
+                <li> 
+                    <a href=@{ProfessorCadastrarR}> PROFESSOR
+                <li>
+                    <a href=@{Pag2R}> Página 2
+                <li>
+                    <a href=@{Pag3R}> Página 3
+            <br>
+
             
-
-
+            <div id="content"><div id="sidebar-left"><h1> Prof. #{professorNome professor} Inserido(a) com sucesso. 
+            <div id="sidebar-center">
+            <div id="sidebar-right">
+            <div id="footer"><br>© Copyright 2017, Inc. Todos os direitos reservados.<br>
+    |]
+    
+    
+            
+            
+            
+            
+        _ -> redirect ProfessorCadastrarR
         
         
