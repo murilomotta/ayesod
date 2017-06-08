@@ -35,7 +35,7 @@ postUsuarioR = do
                        case usuLR of
                            Left _ -> redirect UsuarioR
                            Right _ -> defaultLayout [whamlet|
-                                          <h1> #{usuarioNome usu} Inseridx com sucesso. 
+                                          <h1> #{usuarioNome usu} Inserido com sucesso. 
                                       |]
                     _ -> redirect UsuarioR
                     
@@ -52,9 +52,9 @@ getLoginR = do
                     $maybe msg <- msgComMaybe 
                         <h2>
                             #{msg}
-                            <br><br><br>
+                            <br>
                 |]
-                widgetForm LoginR enctype widget "Login page"
+                widgetForm LoginR enctype widget "FAÇA SEU LOGIN"
                 
                 [whamlet|
                     <div id="footer">© Copyright 2017, Inc. Todos os direitos reservados.<br>
@@ -164,7 +164,7 @@ postLoginR :: Handler Html
 postLoginR = do
                 ((result, _), _) <- runFormPost formLogin
                 case result of
-                    FormSuccess ("root@root.com","root2") -> do
+                    FormSuccess ("murilo@gmail.com","123456") -> do
                         setSession "_USER" "admin"
                         redirect AdminR
                     FormSuccess (email,senha) -> do

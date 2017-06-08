@@ -171,7 +171,8 @@ postProfessorCadastrarR = do
             <div id="sidebar-center">
             <div id="sidebar-right">
             <div id="footer"><br>© Copyright 2017, Inc. Todos os direitos reservados.<br>
-    |]
+            |]
+            
     
     
             

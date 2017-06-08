@@ -32,7 +32,5 @@
 --/disciplinas/listar     ListarDisciplinasR    GET
 /disciplinas/cadastrar  CadastrarDisciplinasR GET POST
 
-
-
     
 
