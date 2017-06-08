@@ -9,21 +9,18 @@ import Data.Text
 getProfessorListarR    ::   Handler TypedContent
 getProfessorListarR = undefined
 
-getProfessorCadastrarR :: Handler TypedContent
-getProfessorCadastrarR = undefined
+--getProfessorCadastrarR :: Handler TypedContent
+--getProfessorCadastrarR = undefined
 
-postProfessorCadastrarR :: Handler TypedContent
-postProfessorCadastrarR = undefined
+--postProfessorCadastrarR :: Handler TypedContent
+--postProfessorCadastrarR = undefined
 
-
-
--- retirado temporariamente - build falha no tipo form professor
-
-{-
 formProfessor :: Form Professor
 formProfessor = renderDivs $ Professor <$>
-             areq textField "Nome" Nothing
+             areq textField "Nome" Nothing <*>
+             areq textField "Nome_exibe" Nothing
 
+           
 getProfessorCadastrarR :: Handler Html
 getProfessorCadastrarR = do
         (widget, enctype) <- generateFormPost formProfessor
@@ -46,8 +43,7 @@ postProfessorCadastrarR = do
                <h1> #{professorNome professor} Inseridx com sucesso. 
             |]
         _ -> redirect ProfessorCadastrarR
-        
--}        
+            
 
 
         
