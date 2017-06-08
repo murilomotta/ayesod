@@ -44,6 +44,7 @@ Horario
   disciplina  DisciplinaId
   prof        ProfessorId
   curso       Text sqltype=varchar(5)
+  sala        SalaId
     
 |]
 
@@ -79,7 +80,7 @@ isUser = do
     mu <- lookupSession "_USER"
     return $ case mu of
         Nothing -> AuthenticationRequired
-        Just _ -> Authorized
+        Just _ ->  Authorized
 
 type Form a = Html -> MForm Handler (FormResult a, Widget)
 

@@ -10,11 +10,33 @@ import Data.Text
 
 import Database.Persist.Postgresql
 
-getListarDisciplinasR :: Handler TypedContent
-getListarDisciplinasR = undefined
 
-getCadastrarDisciplinasR :: Handler TypedContent
-getCadastrarDisciplinasR = undefined
+formDisciplina :: Form Disciplina
+formDisciplina = renderDivs $ Disciplina 
+                          <$> areq textField "Sigla"      Nothing 
+                          <*> areq textField "Descricao"  Nothing
+                          <*> areq textField "Curso"      Nothing
 
-postCadastrarDisciplinasR :: Handler TypedContent
-postCadastrarDisciplinasR = undefined
+getCadastrarDisciplinasR :: Handler Html
+getCadastrarDisciplinasR = do
+        (widget, enctype) <- generateFormPost formDisciplina
+        defaultLayout $ do
+            setTitle "Cadastro de disciplinas"
+            [whamlet|
+                <h1>
+                    ola mundo
+            |]
+            widgetForm CadastrarDisciplinasR enctype widget "Disciplina"
+           
+
+postCadastrarDisciplinasR :: Handler Html    
+postCadastrarDisciplinasR = do
+    ((result, _), _) <- runFormPost formDisciplina
+    case result of
+        FormSuccess disciplina -> do
+            runDB $ insert disciplina 
+            defaultLayout [whamlet| 
+               <h1> #{disciplinaSigla disciplina} inserida com sucesso. 
+            |]
+        _ -> redirect CadastrarDisciplinasR
+            

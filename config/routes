@@ -9,7 +9,7 @@
 /pag2               Pag2R       GET
 /pag3               Pag3R       GET
 /pag4               Pag4R       GET
---/hello              HelloR      GET
+--/hello              HelloR    GET
 /admin              AdminR      GET
 
 /static             StaticR    Static getStatic
@@ -18,18 +18,18 @@
 /logout             LogoutR    POST
 
 /professor/cadastro ProfessorCadastrarR GET POST
-/professor/listar   ProfessorListarR     GET
+--/professor/listar   ProfessorListarR     GET
 
 --sala
-/sala/listar        ListarSalasR        GET 
+--/sala/listar        ListarSalasR        GET 
 /sala/cadastrar     CadastrarSalaR      GET POST
 
 --horarios
-/horario/listar     ListarHorarioR      GET
+--/horario/listar     ListarHorarioR      GET
 /horario/cadastrar  CadastrarHorarioR   GET POST
 
 --disciplinas
-/disciplinas/listar     ListarDisciplinasR    GET
+--/disciplinas/listar     ListarDisciplinasR    GET
 /disciplinas/cadastrar  CadastrarDisciplinasR GET POST
 
 
