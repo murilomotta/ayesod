@@ -12,14 +12,14 @@ import Database.Persist.Postgresql
 
 formUsu :: Form Usuario
 formUsu = renderDivs $ Usuario <$>
-             areq textField "Nome" Nothing <*>
-             areq emailField "E-mail" Nothing <*>
-             areq passwordField "Senha" Nothing 
+             areq textField "Nome " Nothing <*>
+             areq emailField "E-mail " Nothing <*>
+             areq passwordField "Senha " Nothing 
 
 formLogin :: Form (Text, Text)
 formLogin = renderDivs $ (,) <$>
-             areq emailField "E-mail" Nothing <*>
-             areq passwordField "Senha" Nothing 
+             areq emailField "E-mail " Nothing <*>
+             areq passwordField "Senha " Nothing 
 
 getUsuarioR :: Handler Html
 getUsuarioR = do
@@ -74,7 +74,10 @@ getLoginR = do
                     
                     li {
                     float:left;
-                    padding:12px;
+                    padding-left:28px;
+                    padding-right:12px;
+                    padding-top:12px;
+                    padding-bottom:12px;
                     font-size:18px;
                     }
                     
@@ -181,12 +184,16 @@ getAdminR = defaultLayout $ do
             <linha_topo>   
             <div id="logo"><img src=@{StaticR header_jpg}>
             <div id="menu_bg"><div id="menu"> <ul>
+                <li>
+                    <a href=@{AdminR}> HOME
                 <li> 
                     <a href=@{ProfessorCadastrarR}> PROFESSOR
                 <li>
-                    <a href=@{Pag2R}> Página 2
+                    <a href=@{CadastrarDisciplinasR}> DISCIPLINA
                 <li>
-                    <a href=@{Pag3R}> Página 3
+                    <a href=@{CadastrarSalaR}> SALA
+                <li>
+                    <a href=@{CadastrarHorarioR}> HORÁRIO
             <br>
 
             
@@ -207,7 +214,10 @@ getAdminR = defaultLayout $ do
             }
             li {
                 float:left;
-                padding:12px;
+                padding-left:28px;
+                padding-right:12px;
+                padding-top:12px;
+                padding-bottom:12px;
                 font-size:18px;
             }
             linha_topo {

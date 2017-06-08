@@ -21,14 +21,18 @@ getProfessorCadastrarR = do
             [whamlet|
                 <linha_topo>
                 <div id="logo"><img src=@{StaticR header_jpg}>
-                <div id="menu_bg"><div id="menu">
-                    <ul>
-                        <li> 
-                            <a href=@{ProfessorCadastrarR}> PROFESSOR
-                        <li>
-                            <a href=@{Pag2R}> Página 2
-                        <li>
-                            <a href=@{Pag3R}> Página 3
+                <div id="menu_bg"><div id="menu"> <ul>
+                    <li>
+                        <a href=@{AdminR}> HOME
+                    <li> 
+                        <a href=@{ProfessorCadastrarR}> PROFESSOR
+                    <li>
+                        <a href=@{CadastrarDisciplinasR}> DISCIPLINA
+                    <li>
+                        <a href=@{CadastrarSalaR}> SALA
+                    <li>
+                        <a href=@{CadastrarHorarioR}> HORÁRIO
+            <br>
             |]
 
             
@@ -50,7 +54,10 @@ getProfessorCadastrarR = do
                     
                     li {
                     float:left;
-                    padding:6px;
+                    padding-left:28px;
+                    padding-right:12px;
+                    padding-top:6px;
+                    padding-bottom:6px;
                     font-size:18px;
                     }
                     
@@ -146,12 +153,16 @@ postProfessorCadastrarR = do
             <linha_topo>   
             <div id="logo"><img src=@{StaticR header_jpg}>
             <div id="menu_bg"><div id="menu"> <ul>
+                <li>
+                    <a href=@{AdminR}> HOME
                 <li> 
                     <a href=@{ProfessorCadastrarR}> PROFESSOR
                 <li>
-                    <a href=@{Pag2R}> Página 2
+                    <a href=@{CadastrarDisciplinasR}> DISCIPLINA
                 <li>
-                    <a href=@{Pag3R}> Página 3
+                    <a href=@{CadastrarSalaR}> SALA
+                <li>
+                    <a href=@{CadastrarHorarioR}> HORÁRIO
             <br>
 
             
