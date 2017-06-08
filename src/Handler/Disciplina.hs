@@ -13,9 +13,9 @@ import Database.Persist.Postgresql
 
 formDisciplina :: Form Disciplina
 formDisciplina = renderDivs $ Disciplina 
-                          <$> areq textField "Sigla "      Nothing 
-                          <*> areq textField "Descrição "  Nothing
-                          <*> areq textField "Curso "      Nothing
+                          <$> areq textField "Sigla: "      Nothing 
+                          <*> areq textField "Descrição: "  Nothing
+                          <*> areq textField "Curso: "      Nothing
 
 getCadastrarDisciplinasR :: Handler Html
 getCadastrarDisciplinasR = do
@@ -38,7 +38,7 @@ getCadastrarDisciplinasR = do
                         <a href=@{CadastrarHorarioR}> HORÁRIO
             <br>
             |]
-            widgetForm CadastrarDisciplinasR enctype widget "Cadastro de Disciplina"
+            widgetForm CadastrarDisciplinasR enctype widget "CADASTRAR DISCIPLINA"
             
             [whamlet|
                 <div id="footer">© Copyright 2017, Inc. Todos os direitos reservados.<br>

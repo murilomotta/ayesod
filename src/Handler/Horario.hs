@@ -13,11 +13,11 @@ import Database.Persist.Postgresql
 
 formHorario :: Form Horario
 formHorario = renderDivs $ Horario 
-                          <$> areq textField "Período "    Nothing 
-                          <*> areq (selectField discip) "Disciplina " Nothing
-                          <*> areq (selectField profs) "Professor "       Nothing
-                          <*> areq textField "Curso "      Nothing
-                          <*> areq (selectField salas) "Sala "       Nothing
+                          <$> areq textField "Período: "    Nothing 
+                          <*> areq (selectField discip) "Disciplina: " Nothing
+                          <*> areq (selectField profs) "Professor: "       Nothing
+                          <*> areq textField "Curso: "      Nothing
+                          <*> areq (selectField salas) "Sala: "       Nothing
                           
 salas = do
        entidades <- runDB $ selectList [] [Asc SalaNumero] 
@@ -53,7 +53,7 @@ getCadastrarHorarioR = do
                         <a href=@{CadastrarHorarioR}> HORÁRIO
             <br>
             |]
-            widgetForm CadastrarHorarioR enctype widget "Cadastrar Horário"
+            widgetForm CadastrarHorarioR enctype widget "CADASTRAR HORÁRIO"
             
             [whamlet|
                 <div id="footer">© Copyright 2017, Inc. Todos os direitos reservados.<br>

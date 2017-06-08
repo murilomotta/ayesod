@@ -9,8 +9,8 @@ import Data.Text
 
 formProfessor :: Form Professor
 formProfessor = renderDivs $ Professor <$>
-             areq textField "Nome" Nothing <*>
-             areq textField "Apelido" Nothing
+             areq textField "Nome: " Nothing <*>
+             areq textField "Apelido: " Nothing
 
            
 getProfessorCadastrarR :: Handler Html
@@ -36,7 +36,8 @@ getProfessorCadastrarR = do
             |]
 
             
-            widgetForm ProfessorCadastrarR enctype widget "Cadastrar Professor"
+            widgetForm ProfessorCadastrarR enctype widget "CADASTRAR PROFESSOR" 
+
             
             [whamlet|
                 <div id="footer">© Copyright 2017, Inc. Todos os direitos reservados.<br>

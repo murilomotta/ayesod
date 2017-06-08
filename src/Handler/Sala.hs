@@ -13,8 +13,8 @@ import Database.Persist.Postgresql
 
 formSala :: Form Sala
 formSala = renderDivs $ Sala 
-                          <$> areq textField "Número "     Nothing 
-                          <*> areq textField "Descrição "       Nothing
+                          <$> areq textField "Número: "     Nothing 
+                          <*> areq textField "Descrição: "       Nothing
 
 getCadastrarSalaR :: Handler Html
 getCadastrarSalaR = do
@@ -37,7 +37,7 @@ getCadastrarSalaR = do
                         <a href=@{CadastrarHorarioR}> HORÁRIO
             <br>
             |]
-            widgetForm CadastrarSalaR enctype widget "Cadastrar Sala"
+            widgetForm CadastrarSalaR enctype widget "CADASTRAR SALA"
             
             [whamlet|
                 <div id="footer">© Copyright 2017, Inc. Todos os direitos reservados.<br>
