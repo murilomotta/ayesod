@@ -4,7 +4,7 @@
 module Application where
 import Foundation
 import Yesod
-import Usuario
+--import Usuario
 import Handlers
 import Front
 

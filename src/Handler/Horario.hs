@@ -9,3 +9,13 @@ import Control.Applicative
 import Data.Text
 
 import Database.Persist.Postgresql
+
+
+getListarHorarioR   :: Handler TypedContent   
+getListarHorarioR = undefined
+
+getCadastrarHorarioR   :: Handler TypedContent   
+getCadastrarHorarioR = undefined
+
+postCadastrarHorarioR   :: Handler TypedContent   
+postCadastrarHorarioR = undefined

@@ -6,7 +6,20 @@ import Yesod
 import Foundation -- Sem ele é necessário usar o HandlerT explicitamente
 import Data.Text
 
+getProfessorListarR    ::   Handler TypedContent
+getProfessorListarR = undefined
 
+getProfessorCadastrarR :: Handler TypedContent
+getProfessorCadastrarR = undefined
+
+postProfessorCadastrarR :: Handler TypedContent
+postProfessorCadastrarR = undefined
+
+
+
+-- retirado temporariamente - build falha no tipo form professor
+
+{-
 formProfessor :: Form Professor
 formProfessor = renderDivs $ Professor <$>
              areq textField "Nome" Nothing
@@ -33,3 +46,9 @@ postProfessorCadastrarR = do
                <h1> #{professorNome professor} Inseridx com sucesso. 
             |]
         _ -> redirect ProfessorCadastrarR
+        
+-}        
+
+
+        
+        

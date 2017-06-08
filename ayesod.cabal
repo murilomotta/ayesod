@@ -42,7 +42,6 @@ executable         ayesod
     
     other-modules: Application
                    Foundation
-                   Usuario
                    Handlers
                    Front                   
                    Handler.Professor
