@@ -6,14 +6,6 @@ import Yesod
 import Foundation -- Sem ele é necessário usar o HandlerT explicitamente
 import Data.Text
 
-getProfessorListarR    ::   Handler TypedContent
-getProfessorListarR = undefined
-
---getProfessorCadastrarR :: Handler TypedContent
---getProfessorCadastrarR = undefined
-
---postProfessorCadastrarR :: Handler TypedContent
---postProfessorCadastrarR = undefined
 
 formProfessor :: Form Professor
 formProfessor = renderDivs $ Professor <$>
